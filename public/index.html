@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Reported public-safety incidents within 1,000 feet of Garrison at Graham. Aggregate CMPD data, clear reporting periods, and a separate historical archive.">
-  <meta name="referrer" content="no-referrer">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="color-scheme" content="light">
   <title>Garrison at Graham | Neighborhood Safety</title>
   <link rel="stylesheet" href="styles.css">
@@ -17,7 +17,7 @@
       <span class="brand-mark" aria-hidden="true">G</span>
       <span><strong>GARRISON AT GRAHAM</strong><small>NEIGHBORHOOD SAFETY</small></span>
     </a>
-    <nav aria-label="Main navigation"><a href="#daily">Daily view</a><a href="#history">Historical context</a><a href="#method">Sources &amp; method</a></nav>
+    <nav aria-label="Main navigation"><a href="#daily">Daily view</a><a href="#study-area">Map</a><a href="#history">Historical context</a><a href="#method">Sources &amp; method</a></nav>
     <button class="print-button" type="button" id="print">Print summary</button>
   </div>
 </header>
@@ -61,17 +61,31 @@
       </article>
       <article class="panel">
         <div class="figure-label">FIGURE 1.03 <span>Monthly reporting</span></div>
-        <h3 id="monthly-title">How has reporting changed over time?</h3>
+        <h3 id="monthly-title">Monthly reports</h3>
+        <label class="trend-filter" for="trend-category">Category <select id="trend-category"><option value="criminal">All criminal reports</option><option value="violent">Violent crime</option><option value="vehicle">Vehicle crime</option><option value="drugs">Drugs and equipment</option><option value="burglary">Burglary</option><option value="vandalism">Vandalism</option><option value="theft_fraud">Other theft and fraud</option><option value="other">Other criminal reports</option></select></label>
         <p class="panel-subtitle">Twelve completed calendar months. Not affected by the period selector.</p>
         <div id="monthly-chart" class="chart-space"></div>
+        <p id="trend-summary" class="trend-summary" aria-live="polite"></p>
+        <button type="button" class="text-button" id="download-monthly" disabled>Export monthly counts ↓</button>
         <div class="explanation compact" id="monthly-notes"></div>
       </article>
     </div>
+    <article class="panel changes-panel">
+      <h3>Change by category</h3>
+      <p id="changes-caption" class="panel-subtitle">Selected period compared with the same-length period a year earlier.</p>
+      <div id="category-changes" class="table-scroll"></div>
+    </article>
     <article class="panel reconciliation">
       <div><div class="figure-label">FIGURE 1.04 <span>Count reconciliation</span></div><h3>Not every police report is a crime report</h3><p>These mutually exclusive categories reconcile the selected period's total.</p></div>
       <div id="reconciliation" class="reconciliation-values"></div>
     </article>
     <div class="source-strip"><div><span class="micro">LAST SUCCESSFUL DATA CHECK</span><strong id="last-fetch">Not yet run</strong></div><div><span class="micro">LATEST REPORT DATE IN CITYWIDE SOURCE</span><strong id="latest-source">Not yet verified</strong></div><div><span class="micro">COMPLETENESS CUTOFF</span><strong>Not established by this feed</strong></div><button type="button" class="text-button" id="download-live" disabled>Export selected period ↓</button></div>
+  </section>
+
+  <section id="study-area" class="section" aria-labelledby="map-title">
+    <div class="section-heading"><div><h2 id="map-title">Study area</h2><p>All daily counts use a 1,000-foot radius around 715 N. Graham Street.</p></div></div>
+    <div id="study-map" class="study-map" role="region" aria-label="Map of the 1,000-foot study area"><div class="map-placeholder"><p>Street map with the study boundary. No incident locations.</p><button type="button" id="load-map">Load street map</button><p class="map-provider-note">Loads map software from unpkg and street tiles from OpenStreetMap.</p></div></div>
+    <p id="map-status" class="map-caption" aria-live="polite">Center: 35.23579, −80.84027. The boundary is a distance radius, not a property line. <a href="https://www.openstreetmap.org/?mlat=35.23579&amp;mlon=-80.84027#map=16/35.23579/-80.84027" target="_blank" rel="noopener noreferrer">Open in OpenStreetMap</a>.</p>
   </section>
 
   <section id="history" class="section historical" aria-labelledby="history-title">
@@ -102,5 +116,6 @@
 <footer><div class="shell footer-inner"><div><strong>Garrison at Graham · Neighborhood Safety</strong><p>Independent analysis of City of Charlotte / CMPD public data. No CMPD endorsement is implied.</p></div><div><strong>For emergencies, call 911.</strong><p>This site is not monitored for incident reports.</p></div></div></footer>
 <noscript><div class="noscript">JavaScript is required for the interactive counts. No current counts are available in this static page. The historical text remains readable.</div></noscript>
 <script src="app.js" defer></script>
+<script src="map.js" defer></script>
 </body>
 </html>

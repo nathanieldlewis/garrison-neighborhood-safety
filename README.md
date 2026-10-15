@@ -19,8 +19,9 @@ A public page with a fixed 1,000-foot boundary; 30-, 90-, 365-day and YTD report
 windows; equal-duration prior-year comparisons; category counts and percentages;
 twelve completed calendar months; a full reconciliation of exclusions; explicit
 freshness warnings; CSV exports; print styling; and the 55-row historical table.
-No visitor login, third-party analytics, external fonts or JavaScript CDNs are
-used by the site. There is no street map or incident-pin display in this version.
+No visitor login, third-party analytics or external fonts are used. The optional
+street map loads Leaflet 1.9.4 from unpkg (integrity-checked) and OpenStreetMap
+tiles only after a visitor selects Load street map. No incident pins are shown.
 
 ## Deployment: public site repository and GitHub Pages
 
@@ -65,6 +66,23 @@ for the existing site repository. It never changes repository visibility.
    or deployed assets. Check CSV downloads, the historical table and print output.
 6. Verify the next scheduled morning run and designate a maintainer to check
    failures. No next-day run has been verified as part of this delivery.
+
+## Trends and study-area map
+
+The monthly chart can show all criminal reports or a selected category. Its
+summary compares the latest three completed calendar months with the preceding
+three, using exact dates and counts. These periods can differ seasonally; the
+summary does not infer causation or statistical significance. The category-change
+table follows the main period selector and compares the same-length prior-year
+window. Monthly CSV exports include all seven categories and coverage flags are
+honored by withholding unavailable counts.
+
+The map draws a 304.8-meter (1,000-foot) circle around the same fixed study center
+used by the collector. It is a study boundary, not a property line or an incident
+map. No additional incident locations are fetched or published. Map requests go
+to unpkg and OpenStreetMap only after the visitor loads the map. Tile requests use
+normal browser caching and a referrer identifying this public site; attribution
+stays visible. If map services fail, report counts remain available.
 
 ## Data method
 

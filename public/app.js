@@ -6,7 +6,7 @@
     burglary: "Burglary / breaking and entering", vandalism: "Vandalism",
     theft_fraud: "Other theft and fraud", other: "Other criminal reports"
   };
-  const state = { period: "30", live: null, history: null, status: null };
+  const state = { period: "30", trendCategory: "criminal", live: null, history: null, status: null };
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const fmt = n => Number.isInteger(n) && n >= 0 ? n.toLocaleString("en-US") : "Unavailable";
   const percent = (n, total) => total ? (n / total * 100).toFixed(1) + "%" : "0.0%";
@@ -59,7 +59,11 @@
       }
     }
     if (!Array.isArray(data.monthly) || data.monthly.length !== 12) throw Error("Missing monthly series");
-    for (const m of data.monthly) if (!/^\d{4}-\d{2}$/.test(m.month) || !Number.isInteger(m.criminal) || m.criminal < 0) throw Error("Invalid monthly series");
+    for (const m of data.monthly) {
+      if (!/^\d{4}-\d{2}$/.test(m.month) || !Number.isInteger(m.criminal) || m.criminal < 0) throw Error("Invalid monthly series");
+      const counts = Object.keys(labels).map(k=>m.categories?.[k]);
+      if (counts.some(n=>!Number.isInteger(n)||n<0) || counts.reduce((a,b)=>a+b,0)!==m.criminal) throw Error("Invalid monthly categories");
+    }
   }
   function renderStatus() {
     const live = state.live;
@@ -128,20 +132,43 @@
   }
   function renderMonthly() {
     const monthly = state.live?.mode === "published" ? state.live.monthly : [];
+    const key = state.trendCategory;
+    const title = key === "criminal" ? "Criminal reports" : labels[key];
+    const count = m => key === "criminal" ? m.criminal : m.categories[key];
+    $("download-monthly").disabled = !monthly.some(m=>m.available);
+    $("trend-summary").textContent = "";
     if (!monthly.length || !monthly.some(m=>m.available)) {
       $("monthly-chart").innerHTML = empty("Monthly history is not yet available","The first successful pull will populate completed calendar months. No trend has been inferred from overlapping five-year totals.");
       $("monthly-notes").innerHTML = note("1.03.01","Completed months are shown separately from the selected 30-, 90- or 365-day window. Late reports can revise earlier months.");
       return;
     }
-    const maximum = Math.max(5, ...monthly.filter(m=>m.available).map(m=>m.criminal));
+    const maximum = Math.max(5, ...monthly.filter(m=>m.available).map(count));
     const step = Math.max(1, Math.ceil(maximum / 5)), top = step * 5;
     const W=520,H=248,left=33,right=8,plotTop=17,bottom=200,plotW=W-left-right,barStep=plotW/12,barW=barStep*.62;
-    let svg = `<svg class="monthly-svg" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="monthly-svg-title"><title id="monthly-svg-title">Criminal reports by completed month</title>`;
+    let svg = `<svg class="monthly-svg" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="monthly-svg-title"><title id="monthly-svg-title">${esc(title)} by completed month</title>`;
     for(let i=0;i<=5;i++) { const value=step*i,y=bottom-(bottom-plotTop)*value/top; svg += `<line class="grid-line" x1="${left}" x2="${W-right}" y1="${y}" y2="${y}"/><text class="axis-text" x="${left-7}" y="${y+3}" text-anchor="end">${value}</text>`; }
-    monthly.forEach((m,i)=>{const x=left+i*barStep+(barStep-barW)/2;const height=m.available?(bottom-plotTop)*m.criminal/top:0;const y=bottom-height;const label=new Intl.DateTimeFormat("en-US",{month:"short",year:"2-digit",timeZone:"UTC"}).format(new Date(m.month+"-15T12:00:00Z"));svg += `<g><title>${esc(label)}: ${m.available ? fmt(m.criminal)+" criminal reports" : "Unavailable"}</title><rect class="monthly-bar" x="${x}" y="${y}" width="${barW}" height="${height}"/><text class="month-value" x="${x+barW/2}" y="${Math.max(10,y-5)}" text-anchor="middle">${m.available?fmt(m.criminal):"n/a"}</text><text class="axis-text" transform="translate(${x+barW/2},215) rotate(-35)" text-anchor="end">${esc(label)}</text></g>`;});
+    monthly.forEach((m,i)=>{const x=left+i*barStep+(barStep-barW)/2;const height=m.available?(bottom-plotTop)*count(m)/top:0;const y=bottom-height;const label=new Intl.DateTimeFormat("en-US",{month:"short",year:"2-digit",timeZone:"UTC"}).format(new Date(m.month+"-15T12:00:00Z"));svg += `<g><title>${esc(label)}: ${m.available ? fmt(count(m))+" reports" : "Unavailable"}</title><rect class="monthly-bar" x="${x}" y="${y}" width="${barW}" height="${height}"/><text class="month-value" x="${x+barW/2}" y="${Math.max(10,y-5)}" text-anchor="middle">${m.available?fmt(count(m)):"n/a"}</text><text class="axis-text" transform="translate(${x+barW/2},215) rotate(-35)" text-anchor="end">${esc(label)}</text></g>`;});
     svg += "</svg>";
     $("monthly-chart").innerHTML = svg;
+    const recent = monthly.slice(-3), previous = monthly.slice(-6,-3);
+    if ([...recent,...previous].every(m=>m.available)) {
+      const now = recent.reduce((n,m)=>n+count(m),0), before = previous.reduce((n,m)=>n+count(m),0);
+      const range = rows => `${day(rows[0].month+"-01")}–${day(lastDay(new Date(Date.UTC(Number(rows[2].month.slice(0,4)),Number(rows[2].month.slice(5)),1)).toISOString().slice(0,10)))}`;
+      const difference = now-before;
+      const direction = difference===0 ? "unchanged" : `${Math.abs(difference)} ${difference>0 ? "more" : "fewer"}`;
+      $("trend-summary").textContent = `${title}: ${now} in ${range(recent)}, compared with ${before} in ${range(previous)} (${direction}). These are consecutive three-month periods; seasonal differences may affect counts. Late reports may revise either period.`;
+    }
     $("monthly-notes").innerHTML = note("1.03.01","These are report-date counts for twelve completed calendar months. Recent months may still be revised as CMPD records are updated.") + note("1.03.02","Month-to-month differences can reflect reporting and enforcement patterns. They do not, by themselves, establish a change in personal risk.");
+  }
+  function renderChanges() {
+    const p = state.live?.mode === "published" ? state.live.periods[state.period] : null;
+    if (!p?.current_available || !p.comparison_available) {
+      $("category-changes").innerHTML = empty("Comparison unavailable", "Both full periods must be covered by the source.");
+      return;
+    }
+    $("changes-caption").textContent = `${day(p.start)}–${day(lastDay(p.end_exclusive))}, compared with ${day(p.comparison_start)}–${day(lastDay(p.comparison_end_exclusive))}.`;
+    const rows = Object.entries(labels).map(([key,name])=>({name,now:p.current.categories[key],before:p.comparison.categories[key]})).sort((a,b)=>Math.abs(b.now-b.before)-Math.abs(a.now-a.before));
+    $("category-changes").innerHTML = `<table><caption class="sr-only">Category changes for the selected reporting period</caption><thead><tr><th scope="col">Category</th><th scope="col">Current</th><th scope="col">Prior year</th><th scope="col">Change</th></tr></thead><tbody>${rows.map(r=>`<tr><th scope="row">${esc(r.name)}</th><td>${fmt(r.now)}</td><td>${fmt(r.before)}</td><td>${r.now-r.before>0 ? "+" : ""}${r.now-r.before}</td></tr>`).join("")}</tbody></table>`;
   }
   function renderReconciliation() {
     const p=state.live?.mode==="published" ? state.live.periods[state.period] : null;
@@ -162,7 +189,7 @@
     $("overlap-chart").innerHTML=`<div class="overlap-row"><div class="overlap-label"><span>July 8, 2020 to July 7, 2025</span><strong>870</strong></div><div class="overlap-bar" style="width:${870/893*100}%"></div><small>Earlier five-year window</small></div><div class="overlap-row"><div class="overlap-label"><span>July 8, 2021 to July 7, 2026</span><strong>893</strong></div><div class="overlap-bar current" style="width:100%"></div><small>Later five-year window</small></div><div class="overlap-note"><strong>+23</strong><p>Net difference between the two windows.<br>Not an annual trend or an annual percentage increase.</p></div>`;
     $("history-table").innerHTML=h.rows.map(r=>`<tr><th scope="row">${esc(r.category)}</th><td>${fmt(r.prior)}</td><td>${fmt(r.current)}</td><td>${r.change>0?"+":""}${r.change}</td></tr>`).join("");
   }
-  function renderDaily() { renderStatus();renderMetrics();renderCategories();renderMonthly();renderReconciliation(); }
+  function renderDaily() { renderStatus();renderMetrics();renderCategories();renderMonthly();renderChanges();renderReconciliation(); }
   function downloadCSV(filename, rows) {
     const cell = value => {
       let s=String(value ?? "");
@@ -174,6 +201,8 @@
   }
   async function initialize() {
     document.querySelectorAll("[data-period]").forEach(button=>button.addEventListener("click",()=>{state.period=button.dataset.period;document.querySelectorAll("[data-period]").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));renderDaily();}));
+    $("trend-category").addEventListener("change",e=>{state.trendCategory=e.target.value;renderMonthly();});
+    $("download-monthly").addEventListener("click",()=>{if(state.live?.mode!=="published")return;downloadCSV("garrison-monthly-counts.csv",[["Source",state.live.source.url],["Last successful fetch",state.live.last_successful_fetch],["Date basis","Completed calendar months; report date; Eastern Time"],["Month","Criminal reports",...Object.values(labels)],...state.live.monthly.map(m=>[m.month,m.available?m.criminal:"Unavailable",...Object.keys(labels).map(k=>m.available?m.categories[k]:"Unavailable")])]);});
     $("print").addEventListener("click",()=>window.print());
     $("download-history").addEventListener("click",()=>{const h=state.history;if(!h)return;downloadCSV("garrison-historical-cmpd-table-2026-07-08.csv",[["Source",h.source],["Earlier period",h.prior_start,h.prior_end],["Later period",h.current_start,h.current_end],["Category","Prior","Current","Change"],...h.rows.map(r=>[r.category,r.prior,r.current,r.change]),["TOTAL",h.prior_total,h.current_total,h.current_total-h.prior_total]]);});
     $("download-live").addEventListener("click",()=>{const p=state.live?.periods[state.period];if(!p?.current_available)return;downloadCSV(`garrison-${state.period}-day-summary.csv`,[["Source",state.live.source.url],["Last successful fetch",state.live.last_successful_fetch],["Date basis","Date reported; Eastern Time"],["Current start",p.start],["Current end inclusive",lastDay(p.end_exclusive)],["Comparison start",p.comparison_start],["Comparison end inclusive",lastDay(p.comparison_end_exclusive)],["Comparison available",String(p.comparison_available)],["Measure","Current","Comparison"],["Criminal reports",p.current.criminal,p.comparison_available?p.comparison.criminal:"Unavailable"],...Object.entries(labels).map(([k,v])=>[v,p.current.categories[k],p.comparison_available?p.comparison.categories[k]:"Unavailable"]),["All reports",p.current.all_reports],["Excluded: unfounded",p.current.excluded.unfounded],["Excluded: non-criminal",p.current.excluded.noncriminal],["Excluded: unclassified",p.current.excluded.unclassified]]);});
