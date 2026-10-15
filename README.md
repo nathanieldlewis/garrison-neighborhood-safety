@@ -6,7 +6,7 @@ separate. Private Association documents are not included.
 
 ## Deployment status
 
-This package targets the existing **private** repository
+This package targets the dedicated **public** repository
 `nathanieldlewis/garrison-neighborhood-safety` and a **public** GitHub Pages site.
 Only `public/` is uploaded to Pages. The initial snapshot stays pending until a
 successful live CMPD refresh; never substitute historical counts for current data.
@@ -21,12 +21,12 @@ freshness warnings; CSV exports; print styling; and the 55-row historical table.
 No visitor login, third-party analytics, external fonts or JavaScript CDNs are
 used by the site. There is no street map or incident-pin display in this version.
 
-## Deployment: private repository, public GitHub Pages
+## Deployment: public site repository and GitHub Pages
 
-Keep this repository private. Publishing Pages from a private personal repository
-requires GitHub Pro (or another eligible plan). Do not change repository visibility
-to work around plan restrictions. Only the reviewed `public/` directory is deployed.
-Do not add HOA PDFs, correspondence, financials, resident records or project exports.
+This repository contains only the public site package, its aggregate data, tests,
+and operating documentation. Its source and commit history are public. Only the
+reviewed `public/` directory is deployed as the website. Do not add HOA PDFs,
+correspondence, financials, resident records or project exports.
 
 1. Open https://github.com/nathanieldlewis/garrison-neighborhood-safety/settings/pages
    and select **GitHub Actions** under Build and deployment → Source.
@@ -47,7 +47,7 @@ No password or client-side password gate is implemented. If access control is
 needed later, move to a host that authenticates requests before serving assets.
 
 `scripts/publish-github.sh` now only configures Pages and dispatches this workflow
-for the existing private repository. It never creates a public repository.
+for the existing site repository. It never changes repository visibility.
 
 ## First-production-run acceptance checks
 
