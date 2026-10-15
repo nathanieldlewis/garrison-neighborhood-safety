@@ -198,7 +198,8 @@ class PaginationTests(unittest.TestCase):
             return {"features":[{"attributes":row("SYNTHETIC-"+str(i),oid=i)} for i in batch]}
         rows=m.fetch_rows(date(2026,9,1),date(2026,10,13),query)
         self.assertEqual(len(rows),901)
-        self.assertEqual(sizes,[400,400,101])
+        self.assertEqual(sum(sizes), len(ids))
+        self.assertLessEqual(max(sizes), 100)
 
     def test_truncated_id_response_fails(self):
         with self.assertRaises(m.DataError):m.fetch_rows(date(2026,9,1),date(2026,10,13),lambda p:{"objectIds":[1],"exceededTransferLimit":True})

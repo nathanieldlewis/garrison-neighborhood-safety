@@ -195,8 +195,9 @@ def fetch_rows(start: date, end: date, query: Callable[[dict], dict] = api) -> l
         if len(identifiers) > 100000:
             raise DataError("Unexpected radius volume; check the source query.")
         rows: list[dict] = []
-        for offset in range(0, len(identifiers), 400):
-            batch = sorted(identifiers)[offset:offset + 400]
+        # Keep GET URLs below the source server query-string limit.
+        for offset in range(0, len(identifiers), 100):
+            batch = sorted(identifiers)[offset:offset + 100]
             part = query({
                 "objectIds": ",".join(str(i) for i in batch),
                 "outFields": ",".join(FIELDS), "returnGeometry": "false",

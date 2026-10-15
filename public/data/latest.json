@@ -1,9 +1,1905 @@
 {
   "schema_version": 1,
-  "mode": "awaiting_initial_refresh",
-  "last_successful_fetch": null,
+  "mode": "published",
+  "scope": {
+    "address": "715 N. Graham St., Charlotte, NC",
+    "latitude": 35.23579,
+    "longitude": -80.84027,
+    "radius_feet": 1000
+  },
+  "last_successful_fetch": "2026-10-15T17:29:32Z",
+  "report_date_window_end_exclusive": "2026-10-15",
+  "citywide_latest_report_date": "2026-10-13T00:00:00Z",
+  "citywide_earliest_report_date": "2017-01-01T00:00:00Z",
   "source_completeness_cutoff": null,
-  "periods": {},
-  "monthly": [],
-  "daily": []
+  "source_activity_warning": false,
+  "periods": {
+    "30": {
+      "start": "2026-09-15",
+      "end_exclusive": "2026-10-15",
+      "comparison_start": "2025-09-15",
+      "comparison_end_exclusive": "2025-10-15",
+      "days": 30,
+      "current_available": true,
+      "comparison_available": true,
+      "current": {
+        "criminal": 15,
+        "all_reports": 15,
+        "categories": {
+          "violent": 1,
+          "vehicle": 1,
+          "drugs": 2,
+          "burglary": 2,
+          "vandalism": 1,
+          "theft_fraud": 1,
+          "other": 7
+        },
+        "excluded": {
+          "unfounded": 0,
+          "noncriminal": 0,
+          "unclassified": 0
+        }
+      },
+      "comparison": {
+        "criminal": 13,
+        "all_reports": 14,
+        "categories": {
+          "violent": 2,
+          "vehicle": 6,
+          "drugs": 0,
+          "burglary": 0,
+          "vandalism": 1,
+          "theft_fraud": 1,
+          "other": 3
+        },
+        "excluded": {
+          "unfounded": 1,
+          "noncriminal": 0,
+          "unclassified": 0
+        }
+      }
+    },
+    "90": {
+      "start": "2026-07-17",
+      "end_exclusive": "2026-10-15",
+      "comparison_start": "2025-07-17",
+      "comparison_end_exclusive": "2025-10-15",
+      "days": 90,
+      "current_available": true,
+      "comparison_available": true,
+      "current": {
+        "criminal": 39,
+        "all_reports": 44,
+        "categories": {
+          "violent": 1,
+          "vehicle": 5,
+          "drugs": 8,
+          "burglary": 2,
+          "vandalism": 1,
+          "theft_fraud": 7,
+          "other": 15
+        },
+        "excluded": {
+          "unfounded": 1,
+          "noncriminal": 4,
+          "unclassified": 0
+        }
+      },
+      "comparison": {
+        "criminal": 32,
+        "all_reports": 36,
+        "categories": {
+          "violent": 4,
+          "vehicle": 9,
+          "drugs": 3,
+          "burglary": 0,
+          "vandalism": 2,
+          "theft_fraud": 2,
+          "other": 12
+        },
+        "excluded": {
+          "unfounded": 1,
+          "noncriminal": 3,
+          "unclassified": 0
+        }
+      }
+    },
+    "365": {
+      "start": "2025-10-15",
+      "end_exclusive": "2026-10-15",
+      "comparison_start": "2024-10-15",
+      "comparison_end_exclusive": "2025-10-15",
+      "days": 365,
+      "current_available": true,
+      "comparison_available": true,
+      "current": {
+        "criminal": 134,
+        "all_reports": 150,
+        "categories": {
+          "violent": 8,
+          "vehicle": 20,
+          "drugs": 30,
+          "burglary": 5,
+          "vandalism": 4,
+          "theft_fraud": 23,
+          "other": 44
+        },
+        "excluded": {
+          "unfounded": 2,
+          "noncriminal": 14,
+          "unclassified": 0
+        }
+      },
+      "comparison": {
+        "criminal": 120,
+        "all_reports": 136,
+        "categories": {
+          "violent": 9,
+          "vehicle": 42,
+          "drugs": 8,
+          "burglary": 2,
+          "vandalism": 11,
+          "theft_fraud": 12,
+          "other": 36
+        },
+        "excluded": {
+          "unfounded": 3,
+          "noncriminal": 11,
+          "unclassified": 2
+        }
+      }
+    },
+    "ytd": {
+      "start": "2026-01-01",
+      "end_exclusive": "2026-10-15",
+      "comparison_start": "2025-01-01",
+      "comparison_end_exclusive": "2025-10-15",
+      "days": 287,
+      "current_available": true,
+      "comparison_available": true,
+      "current": {
+        "criminal": 109,
+        "all_reports": 123,
+        "categories": {
+          "violent": 6,
+          "vehicle": 16,
+          "drugs": 24,
+          "burglary": 4,
+          "vandalism": 3,
+          "theft_fraud": 17,
+          "other": 39
+        },
+        "excluded": {
+          "unfounded": 1,
+          "noncriminal": 13,
+          "unclassified": 0
+        }
+      },
+      "comparison": {
+        "criminal": 96,
+        "all_reports": 109,
+        "categories": {
+          "violent": 6,
+          "vehicle": 32,
+          "drugs": 7,
+          "burglary": 2,
+          "vandalism": 10,
+          "theft_fraud": 8,
+          "other": 31
+        },
+        "excluded": {
+          "unfounded": 2,
+          "noncriminal": 9,
+          "unclassified": 2
+        }
+      }
+    }
+  },
+  "monthly": [
+    {
+      "month": "2025-10",
+      "available": true,
+      "criminal": 14,
+      "all_reports": 14,
+      "categories": {
+        "violent": 3,
+        "vehicle": 5,
+        "drugs": 1,
+        "burglary": 1,
+        "vandalism": 0,
+        "theft_fraud": 2,
+        "other": 2
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 0,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2025-11",
+      "available": true,
+      "criminal": 4,
+      "all_reports": 5,
+      "categories": {
+        "violent": 1,
+        "vehicle": 1,
+        "drugs": 1,
+        "burglary": 0,
+        "vandalism": 0,
+        "theft_fraud": 0,
+        "other": 1
+      },
+      "excluded": {
+        "unfounded": 1,
+        "noncriminal": 0,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2025-12",
+      "available": true,
+      "criminal": 14,
+      "all_reports": 15,
+      "categories": {
+        "violent": 0,
+        "vehicle": 1,
+        "drugs": 4,
+        "burglary": 0,
+        "vandalism": 1,
+        "theft_fraud": 5,
+        "other": 3
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 1,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-01",
+      "available": true,
+      "criminal": 7,
+      "all_reports": 10,
+      "categories": {
+        "violent": 1,
+        "vehicle": 1,
+        "drugs": 2,
+        "burglary": 1,
+        "vandalism": 1,
+        "theft_fraud": 0,
+        "other": 1
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 3,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-02",
+      "available": true,
+      "criminal": 7,
+      "all_reports": 8,
+      "categories": {
+        "violent": 0,
+        "vehicle": 1,
+        "drugs": 1,
+        "burglary": 0,
+        "vandalism": 0,
+        "theft_fraud": 1,
+        "other": 4
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 1,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-03",
+      "available": true,
+      "criminal": 13,
+      "all_reports": 16,
+      "categories": {
+        "violent": 0,
+        "vehicle": 3,
+        "drugs": 4,
+        "burglary": 0,
+        "vandalism": 0,
+        "theft_fraud": 2,
+        "other": 4
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 3,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-04",
+      "available": true,
+      "criminal": 7,
+      "all_reports": 7,
+      "categories": {
+        "violent": 0,
+        "vehicle": 1,
+        "drugs": 1,
+        "burglary": 1,
+        "vandalism": 0,
+        "theft_fraud": 2,
+        "other": 2
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 0,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-05",
+      "available": true,
+      "criminal": 14,
+      "all_reports": 15,
+      "categories": {
+        "violent": 1,
+        "vehicle": 3,
+        "drugs": 3,
+        "burglary": 0,
+        "vandalism": 0,
+        "theft_fraud": 1,
+        "other": 6
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 1,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-06",
+      "available": true,
+      "criminal": 11,
+      "all_reports": 11,
+      "categories": {
+        "violent": 1,
+        "vehicle": 1,
+        "drugs": 2,
+        "burglary": 0,
+        "vandalism": 1,
+        "theft_fraud": 2,
+        "other": 4
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 0,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-07",
+      "available": true,
+      "criminal": 16,
+      "all_reports": 20,
+      "categories": {
+        "violent": 2,
+        "vehicle": 1,
+        "drugs": 4,
+        "burglary": 0,
+        "vandalism": 0,
+        "theft_fraud": 5,
+        "other": 4
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 4,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-08",
+      "available": true,
+      "criminal": 14,
+      "all_reports": 15,
+      "categories": {
+        "violent": 0,
+        "vehicle": 1,
+        "drugs": 4,
+        "burglary": 0,
+        "vandalism": 0,
+        "theft_fraud": 2,
+        "other": 7
+      },
+      "excluded": {
+        "unfounded": 1,
+        "noncriminal": 0,
+        "unclassified": 0
+      }
+    },
+    {
+      "month": "2026-09",
+      "available": true,
+      "criminal": 11,
+      "all_reports": 12,
+      "categories": {
+        "violent": 0,
+        "vehicle": 4,
+        "drugs": 1,
+        "burglary": 1,
+        "vandalism": 0,
+        "theft_fraud": 2,
+        "other": 3
+      },
+      "excluded": {
+        "unfounded": 0,
+        "noncriminal": 1,
+        "unclassified": 0
+      }
+    }
+  ],
+  "daily": [
+    {
+      "date": "2024-10-17",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-10-22",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-10-24",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-10-29",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-11-01",
+      "counts": {
+        "other": 1,
+        "vehicle": 2
+      }
+    },
+    {
+      "date": "2024-11-02",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-11-03",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-11-04",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-11-06",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-11-10",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2024-11-18",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2024-11-26",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-11-29",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2024-12-10",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-12-11",
+      "counts": {
+        "theft_fraud": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-12-17",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-12-18",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-12-19",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-12-20",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-12-22",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-12-28",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-12-29",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-12-31",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2025-01-01",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-01-03",
+      "counts": {
+        "theft_fraud": 2
+      }
+    },
+    {
+      "date": "2025-01-04",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-01-06",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-01-08",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-01-09",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-01-18",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-02-02",
+      "counts": {
+        "vandalism": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-02-09",
+      "counts": {
+        "other": 1,
+        "vandalism": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-02-16",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2025-02-19",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-02-23",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-02-24",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-02-27",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2025-03-06",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2025-03-09",
+      "counts": {
+        "noncriminal": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-03-14",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-03-15",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-03-21",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2025-03-22",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-03-23",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-03-26",
+      "counts": {
+        "unclassified": 1
+      }
+    },
+    {
+      "date": "2025-03-28",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-03-31",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-04-01",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-04-05",
+      "counts": {
+        "burglary": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-04-08",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2025-04-17",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-04-19",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-04-22",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2025-04-28",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-05-02",
+      "counts": {
+        "vehicle": 3
+      }
+    },
+    {
+      "date": "2025-05-07",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2025-05-09",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-05-14",
+      "counts": {
+        "noncriminal": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-05-15",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-05-16",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2025-05-29",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-05-30",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2025-05-31",
+      "counts": {
+        "drugs": 1,
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-06-01",
+      "counts": {
+        "noncriminal": 2
+      }
+    },
+    {
+      "date": "2025-06-03",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-06-04",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-06-07",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-06-08",
+      "counts": {
+        "vehicle": 2
+      }
+    },
+    {
+      "date": "2025-06-10",
+      "counts": {
+        "other": 1,
+        "unclassified": 1
+      }
+    },
+    {
+      "date": "2025-06-11",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-06-12",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-06-13",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-06-22",
+      "counts": {
+        "other": 1,
+        "theft_fraud": 2
+      }
+    },
+    {
+      "date": "2025-06-29",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-07-01",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2025-07-02",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-07-03",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2025-07-06",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-07-08",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-07-13",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2025-07-17",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-07-23",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-07-24",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-07-25",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2025-07-30",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-08-03",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-08-05",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-08-06",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-08-14",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-08-15",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-08-19",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-08-24",
+      "counts": {
+        "theft_fraud": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2025-08-25",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2025-08-26",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2025-09-02",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-09-03",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-09-06",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2025-09-07",
+      "counts": {
+        "drugs": 2
+      }
+    },
+    {
+      "date": "2025-09-09",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2025-09-14",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-09-15",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2025-09-16",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2025-09-18",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-09-19",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-09-27",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-09-28",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-09-29",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-10-04",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-10-07",
+      "counts": {
+        "vehicle": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2025-10-09",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2025-10-12",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-10-14",
+      "counts": {
+        "vehicle": 2
+      }
+    },
+    {
+      "date": "2025-10-15",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2025-10-22",
+      "counts": {
+        "drugs": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-10-24",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2025-10-26",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-10-27",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-11-03",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-11-04",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2025-11-07",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-11-19",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-11-26",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2025-12-04",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-12-06",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-12-09",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-12-11",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-12-12",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2025-12-14",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-12-15",
+      "counts": {
+        "other": 1,
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-12-17",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-12-18",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-12-19",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2025-12-21",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2025-12-23",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2025-12-25",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2025-12-29",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2026-01-02",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-01-06",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2026-01-07",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2026-01-10",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-01-11",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-01-15",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-01-24",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-01-27",
+      "counts": {
+        "vandalism": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-01-28",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-02-04",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-02-05",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-02-06",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-02-13",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-02-20",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-02-22",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-02-25",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-02-26",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-03-03",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-03-04",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-03-07",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-03-09",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-03-10",
+      "counts": {
+        "noncriminal": 2,
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-03-11",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-03-12",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-03-18",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-03-25",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-03-26",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-03-27",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-03-29",
+      "counts": {
+        "drugs": 1,
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-03-30",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-04-02",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-04-03",
+      "counts": {
+        "other": 1,
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-04-22",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-04-23",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2026-04-25",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-05-01",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-05-04",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-05-05",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-05-06",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-05-11",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-05-15",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-05-16",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-05-17",
+      "counts": {
+        "other": 2
+      }
+    },
+    {
+      "date": "2026-05-18",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-05-22",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2026-05-29",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-05-31",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-06-04",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-06-10",
+      "counts": {
+        "theft_fraud": 2
+      }
+    },
+    {
+      "date": "2026-06-12",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-06-13",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2026-06-14",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-06-18",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-06-20",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2026-06-27",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-07-02",
+      "counts": {
+        "violent": 2
+      }
+    },
+    {
+      "date": "2026-07-03",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-07-04",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-07-05",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-07-08",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-07-10",
+      "counts": {
+        "drugs": 1,
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-07-11",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-07-13",
+      "counts": {
+        "drugs": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-07-14",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-07-17",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-07-19",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-07-22",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-07-23",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-07-27",
+      "counts": {
+        "drugs": 1,
+        "noncriminal": 1,
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-07-28",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-08-01",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "counts": {
+        "other": 1,
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-08-05",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-08-06",
+      "counts": {
+        "other": 1,
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-08-10",
+      "counts": {
+        "other": 2
+      }
+    },
+    {
+      "date": "2026-08-12",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-08-17",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-08-18",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-08-21",
+      "counts": {
+        "drugs": 1,
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-08-22",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "counts": {
+        "drugs": 1,
+        "vehicle": 3
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-10-02",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-10-05",
+      "counts": {
+        "other": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "counts": {
+        "other": 1
+      }
+    }
+  ],
+  "quality": {
+    "rows_received": 286,
+    "unique_reports": 286,
+    "exact_duplicates_removed": 0,
+    "aggregate_sha256": "535a096dd5907d1ce524b1d169584bee800683c7c1bf74445b002df1bae09af8",
+    "history_change_override": false
+  },
+  "source": {
+    "name": "City of Charlotte / CMPD Incidents",
+    "url": "https://data.charlottenc.gov/datasets/charlotte::cmpd-incidents-1",
+    "layer": "https://gis.charlottenc.gov/arcgis/rest/services/CMPD/CMPDIncidents/MapServer/0"
+  },
+  "method_version": "1.0"
 }

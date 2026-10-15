@@ -6,11 +6,12 @@ separate. Private Association documents are not included.
 
 ## Deployment status
 
-This package targets the dedicated **public** repository
-`nathanieldlewis/garrison-neighborhood-safety` and a **public** GitHub Pages site.
-Only `public/` is uploaded to Pages. The initial snapshot stays pending until a
-successful live CMPD refresh; never substitute historical counts for current data.
-Check Actions and the Pages deployment for current operational status.
+Dedicated public repository: `nathanieldlewis/garrison-neighborhood-safety`.
+GitHub Pages is configured to deploy only `public/` through GitHub Actions.
+The first live CMPD pull succeeded on October 15, 2026 after reducing request
+batches to 100 IDs to stay within the source server's query-string limit.
+All 35 offline tests pass. See Actions and the site's visible freshness status
+for the latest run; a later source failure must not be treated as zero reports.
 
 ## What members receive
 
@@ -73,7 +74,7 @@ Source: City of Charlotte / CMPD Incidents, layer 0.
   query. Public geocoding may be generalized. This is not parcel attribution.
 - It refetches the entire analysis horizon, about two years, on each run so older
   corrections are not missed. It does not simply append new reports.
-- It obtains all object IDs, checks the count, fetches in batches of 400, and checks
+- It obtains all object IDs, checks the count, fetches in batches of 100, and checks
   the IDs again. Missing rows, truncation and inconsistent IDs fail the refresh.
 - It deduplicates by `INCIDENT_REPORT_ID`. Identical repeats count once; conflicting
   report versions require review rather than an arbitrary choice.
@@ -141,8 +142,8 @@ briefing remains unchanged and is not published here.
   chart, failed-refresh retention, stale warnings and invalid-data withholding were
   exercised in a browser. Live-state UI tests used synthetic fixtures only. Those
   fixtures are not in the deployed assets or the delivered preview.
-- A live CMPD pull, an actual GitHub deployment and an unattended next-day run have
-  NOT been completed or verified.
+- The first live CMPD pull succeeded on October 15, 2026. The next unattended
+  scheduled run still needs verification. Deployment status is reported in Actions.
 
 ## Local development
 
