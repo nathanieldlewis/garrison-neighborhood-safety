@@ -1,5 +1,5 @@
 {
   "state": "error",
-  "last_attempt": "2026-10-15T17:26:37Z",
+  "last_attempt": "2026-10-15T17:29:02Z",
   "message": "The latest data check failed. The last successful snapshot has been retained; no zero counts have been substituted."
 }
