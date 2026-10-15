@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reported public-safety incidents within 1,000 feet of Garrison at Graham. Aggregate CMPD data, clear reporting periods, and a separate historical archive.">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light">
+  <title>Garrison at Graham | Neighborhood Safety</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="brand" href="#main" aria-label="Garrison at Graham neighborhood safety home">
+      <span class="brand-mark" aria-hidden="true">G</span>
+      <span><strong>GARRISON AT GRAHAM</strong><small>NEIGHBORHOOD SAFETY</small></span>
+    </a>
+    <nav aria-label="Main navigation"><a href="#daily">Daily view</a><a href="#history">Historical context</a><a href="#method">Sources &amp; method</a></nav>
+    <button class="print-button" type="button" id="print">Print summary</button>
+  </div>
+</header>
+<main id="main" class="shell">
+  <section class="hero" aria-labelledby="page-title">
+    <div>
+      <div class="eyebrow">PUBLIC INFORMATION <span class="eyebrow-dot"></span> 1,000-FOOT STUDY AREA</div>
+      <h1 id="page-title">Public safety near Garrison</h1>
+      <p class="dek">Reported incidents around 715 N. Graham Street.<br>One consistent boundary. Clearly dated data.</p>
+      <div class="hero-foot"><span class="status-pill" id="status-pill">SETUP: NOT YET LIVE</span><span>A daily data check, not a real-time alert service.</span></div>
+    </div>
+    <aside class="scope-card" aria-label="Study area">
+      <svg viewBox="0 0 160 145" class="scope-graphic" role="img" aria-label="Schematic: 1,000-foot radius around Garrison at Graham. Not a street map.">
+        <circle cx="72" cy="72" r="55" class="scope-fill"/>
+        <circle cx="72" cy="72" r="55" class="scope-outline"/>
+        <path d="M72 8V136M8 72H136" class="scope-cross"/>
+        <circle cx="72" cy="72" r="6" class="scope-center"/>
+        <path d="M80 72H126" class="scope-radius"/>
+        <text x="94" y="62" class="scope-text">1,000 ft</text>
+        <path d="M140 25V7m-4 5 4-5 4 5" class="scope-north"/>
+        <text x="140" y="39" text-anchor="middle" class="scope-text">N</text>
+      </svg>
+      <div><span class="micro">FIXED GEOGRAPHY</span><h2>1,000 feet from Garrison</h2><p>Centered on the coordinates in the Association's July 2026 CMPD extract.</p><small>35.23579, −80.84027<br>Schematic only. No incident pins.</small></div>
+    </aside>
+  </section>
+
+  <section id="feed-notice" class="notice" aria-live="polite"><strong id="notice-title">Daily reporting has not been activated.</strong><p id="notice-text">Current counts remain blank until a successful CMPD data pull. The July 2026 archive below is historical, not a current safety assessment.</p></section>
+
+  <section id="daily" class="section" aria-labelledby="daily-title">
+    <div class="section-heading"><div><div class="eyebrow">01 / DAILY VIEW</div><h2 id="daily-title">The latest reporting period</h2><p id="period-caption">Report-date totals will appear after the first successful refresh.</p></div><div class="segmented" role="group" aria-label="Reporting period"><button data-period="30" aria-pressed="true">30 days</button><button data-period="90" aria-pressed="false">90 days</button><button data-period="365" aria-pressed="false">365 days</button><button data-period="ytd" aria-pressed="false">YTD</button></div></div>
+    <div class="figure-label">FIGURE 1.01 <span>Criminal reports and selected categories</span></div>
+    <div class="metrics" id="metrics" aria-live="polite"></div>
+    <div class="explanation" id="metrics-notes"></div>
+    <div class="two-col">
+      <article class="panel">
+        <div class="figure-label">FIGURE 1.02 <span>Category mix</span></div>
+        <h3 id="category-title">Which categories account for the reports?</h3>
+        <p class="panel-subtitle">Count and share of criminal reports in the selected period.</p>
+        <div id="category-chart" class="chart-space"></div>
+        <div class="explanation compact" id="category-notes"></div>
+      </article>
+      <article class="panel">
+        <div class="figure-label">FIGURE 1.03 <span>Monthly reporting</span></div>
+        <h3 id="monthly-title">How has reporting changed over time?</h3>
+        <p class="panel-subtitle">Twelve completed calendar months. Not affected by the period selector.</p>
+        <div id="monthly-chart" class="chart-space"></div>
+        <div class="explanation compact" id="monthly-notes"></div>
+      </article>
+    </div>
+    <article class="panel reconciliation">
+      <div><div class="figure-label">FIGURE 1.04 <span>Count reconciliation</span></div><h3>Not every police report is a crime report</h3><p>These mutually exclusive categories reconcile the selected period's total.</p></div>
+      <div id="reconciliation" class="reconciliation-values"></div>
+    </article>
+    <div class="source-strip"><div><span class="micro">LAST SUCCESSFUL DATA CHECK</span><strong id="last-fetch">Not yet run</strong></div><div><span class="micro">LATEST REPORT DATE IN CITYWIDE SOURCE</span><strong id="latest-source">Not yet verified</strong></div><div><span class="micro">COMPLETENESS CUTOFF</span><strong>Not established by this feed</strong></div><button type="button" class="text-button" id="download-live" disabled>Export selected period ↓</button></div>
+  </section>
+
+  <section id="history" class="section historical" aria-labelledby="history-title">
+    <div class="section-heading"><div><div class="eyebrow">02 / HISTORICAL CONTEXT</div><h2 id="history-title">The July 2026 extract provides context, not today's count</h2><p>Five-year window: July 8, 2021 through July 7, 2026. Association transcription of CMPD's radius extract.</p></div><span class="archive-tag">FIXED ARCHIVE</span></div>
+    <div class="archive-metrics"><div><span class="micro">ALL REPORTED INCIDENTS</span><strong>893</strong><small>Includes non-criminal categories</small></div><div><span class="micro">VEHICLE OFFENSES</span><strong>201</strong><small>Vehicle theft, theft from vehicles and parts</small></div><div><span class="micro">DRUGS AND EQUIPMENT</span><strong>63</strong><small>58 drug violations + 5 equipment violations</small></div><div><span class="micro">SELECTED FIREARM CATEGORIES</span><strong>20</strong><small>9 gun assaults + 11 gun weapon-law violations</small></div></div>
+    <div class="two-col">
+      <article class="panel"><div class="figure-label">FIGURE 2.01 <span>Largest source categories</span></div><h3>Vehicle theft categories are prominent in the historical record</h3><p class="panel-subtitle">Largest individual rows in the extract. Percentages use all 893 reports.</p><div id="history-chart" class="chart-space"></div><div class="explanation compact"><p><span>2.01.01</span> Vehicle theft, theft from vehicles and parts theft total 201 reports, or 22.5% of the archive.</p><p><span>2.01.02</span> The extract also includes non-criminal reports. The full total must not be described as 893 crimes.</p></div></article>
+      <article class="panel"><div class="figure-label">FIGURE 2.02 <span>Overlapping five-year windows</span></div><h3>The windows differ by 23 reports; this is not annual growth</h3><p class="panel-subtitle">Four years are shared between the two periods.</p><div id="overlap-chart" class="chart-space"></div><div class="explanation compact"><p><span>2.02.01</span> The total rises from 870 to 893, a 2.6% difference between five-year totals, not a year-over-year rate.</p><p><span>2.02.02</span> With unchanged records in the shared years, the 23-report difference compares the newest year with the year it replaced five years earlier.</p><p><span>2.02.03</span> The two selected firearm categories fall from 21 to 20. This table does not support a claim that those categories increased.</p></div></article>
+    </div>
+    <details class="archive-detail"><summary><span>FIGURE 2.03 &nbsp; Complete 55-category historical table</span><span class="summary-hint">Show source rows</span></summary><div class="detail-body"><div class="table-toolbar"><p>Original category order. Source totals reconcile to 870 and 893.</p><button type="button" class="text-button" id="download-history">Export historical table ↓</button></div><div class="table-scroll"><table><caption class="sr-only">Historical CMPD category counts for overlapping five-year windows</caption><thead><tr><th scope="col">Source category</th><th scope="col">2020–2025</th><th scope="col">2021–2026</th><th scope="col">Change</th></tr></thead><tbody id="history-table"></tbody><tfoot><tr><th scope="row">All categories</th><td>870</td><td>893</td><td>+23</td></tr></tfoot></table></div></div></details>
+    <p class="archive-provenance">Archive provenance: <em>Garrison_Project_Context.md</em>, complete category table; reproduced in the Association's July 2026 briefing, page 6. The original CMPD extract was not included in the migration export. These figures are kept separate from the daily public-feed calculations.</p>
+  </section>
+
+  <section id="method" class="section" aria-labelledby="method-title">
+    <div class="section-heading"><div><div class="eyebrow">03 / SOURCES &amp; METHOD</div><h2 id="method-title">Read the counts with their limits in view</h2><p>This is an independent community analysis of public data, not a CMPD publication or a prediction of personal risk.</p></div></div>
+    <div class="method-grid">
+      <article><span class="method-number">3.01</span><h3>One report, one classification</h3><p>The daily view counts distinct incident-report IDs. CMPD assigns the highest NIBRS offense to each report. Lower-ranked offenses within the same incident are not separately counted here.</p></article>
+      <article><span class="method-number">3.02</span><h3>Report date, not occurrence date</h3><p>Windows use the date reported, in Eastern Time, through the previous completed day. Comparisons use an equal number of days ending one calendar year earlier. Exact dates appear with the figures.</p></article>
+      <article><span class="method-number">3.03</span><h3>Crime totals exclude three groups</h3><p>Reports marked unfounded are removed first, followed by non-criminal 800-series codes and unrecognized codes. Unrecognized codes remain visible in the reconciliation until reviewed.</p></article>
+      <article><span class="method-number">3.04</span><h3>Nearby does not mean on the property</h3><p>The radius query uses the coordinates published by CMPD. Public locations may be generalized. Counts cannot establish which business or residential parcel an incident originated from.</p></article>
+      <article><span class="method-number">3.05</span><h3>A fresh check is not complete coverage</h3><p>The latest citywide report date is not a certified cutoff. Reports can be delayed, revised or reclassified. Failed updates retain the last good snapshot; a warning appears when it becomes stale.</p></article>
+      <article><span class="method-number">3.06</span><h3>No personal incident details</h3><p>Only aggregate counts are published. The site omits names, ages, unit numbers, incident narratives, report IDs, exact incident locations, private correspondence and Board records.</p></article>
+    </div>
+    <details class="technical-detail"><summary>Category definitions and the firearm-data limitation</summary><div class="detail-body"><p><strong>Violent crime:</strong> NIBRS 09A, 11A, 11B, 11C, 120 and 13A. <strong>Vehicle crime:</strong> 240, 23F and 23G. <strong>Drugs and equipment:</strong> 35A and 35B. <strong>Burglary:</strong> 220. <strong>Vandalism:</strong> 290. <strong>Other theft and fraud:</strong> remaining 23-series and 26-series codes, plus 250, 270 and 280. Other recognized criminal codes are grouped separately.</p><p><strong>Daily firearm totals are not available from this schema.</strong> The public feed does not provide the weapon-level detail needed to reproduce the archive's gun-assault and gun-violation counts. Weapon-law code 520 is not automatically treated as firearm crime.</p><p>The archive's broader grouping of violence and sex offenses differs from the daily view. Historical totals are not appended to the live series. A difference in counts is not proof that an intervention caused a change.</p></div></details>
+    <div class="source-links"><span class="micro">PUBLIC SOURCE REFERENCES</span><a href="https://data.charlottenc.gov/datasets/charlotte::cmpd-incidents-1" target="_blank" rel="noopener noreferrer">CMPD incident dataset ↗</a><a href="https://gis.charlottenc.gov/arcgis/rest/services/CMPD/CMPDIncidents/MapServer/0" target="_blank" rel="noopener noreferrer">Service definition and fields ↗</a><a href="https://www.charlottenc.gov/cmpd/News-Information/Crime-Statistics-Report" target="_blank" rel="noopener noreferrer">Official CMPD statistics ↗</a></div>
+  </section>
+</main>
+<footer><div class="shell footer-inner"><div><strong>Garrison at Graham · Neighborhood Safety</strong><p>Independent analysis of City of Charlotte / CMPD public data. No CMPD endorsement is implied.</p></div><div><strong>For emergencies, call 911.</strong><p>This site is not monitored for incident reports.</p></div></div></footer>
+<noscript><div class="noscript">JavaScript is required for the interactive counts. No current counts are available in this static page. The historical text remains readable.</div></noscript>
+<script src="app.js" defer></script>
+</body>
+</html>

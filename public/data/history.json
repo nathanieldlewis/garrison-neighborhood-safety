@@ -1,0 +1,354 @@
+{
+  "source": "Association transcription of CMPD Crime Analysis Division extract printed July 8, 2026",
+  "provenance": "Transcribed category table supplied in Garrison_Project_Context.md and reproduced in the July 2026 Association briefing, page 6. Original CMPD extract was not included in the migration export.",
+  "source_date": "2026-07-08",
+  "radius_feet": 1000,
+  "prior_start": "2020-07-08",
+  "prior_end": "2025-07-07",
+  "current_start": "2021-07-08",
+  "current_end": "2026-07-07",
+  "prior_total": 870,
+  "current_total": 893,
+  "rows": [
+    {
+      "category": "Murder",
+      "prior": 3,
+      "current": 4,
+      "change": 1
+    },
+    {
+      "category": "Forcible Rape",
+      "prior": 2,
+      "current": 2,
+      "change": 0
+    },
+    {
+      "category": "Armed Robbery Commercial",
+      "prior": 6,
+      "current": 6,
+      "change": 0
+    },
+    {
+      "category": "Armed Robbery Personal",
+      "prior": 4,
+      "current": 3,
+      "change": -1
+    },
+    {
+      "category": "Strong Arm Robbery Commercial",
+      "prior": 10,
+      "current": 10,
+      "change": 0
+    },
+    {
+      "category": "Strong Arm Robbery Personal",
+      "prior": 8,
+      "current": 8,
+      "change": 0
+    },
+    {
+      "category": "Aggravated Assault Knife",
+      "prior": 8,
+      "current": 8,
+      "change": 0
+    },
+    {
+      "category": "Aggravated Assault Gun",
+      "prior": 10,
+      "current": 9,
+      "change": -1
+    },
+    {
+      "category": "Aggravated Assault Other",
+      "prior": 7,
+      "current": 7,
+      "change": 0
+    },
+    {
+      "category": "Aggravated Assault Physical Force",
+      "prior": 1,
+      "current": 3,
+      "change": 2
+    },
+    {
+      "category": "Burglary/B&E Commercial",
+      "prior": 19,
+      "current": 19,
+      "change": 0
+    },
+    {
+      "category": "Burglary/B&E Residential",
+      "prior": 12,
+      "current": 12,
+      "change": 0
+    },
+    {
+      "category": "Burglary/B&E Residential Storage",
+      "prior": 1,
+      "current": 0,
+      "change": -1
+    },
+    {
+      "category": "Motor Vehicle Theft",
+      "prior": 60,
+      "current": 65,
+      "change": 5
+    },
+    {
+      "category": "Pocket-Picking",
+      "prior": 2,
+      "current": 2,
+      "change": 0
+    },
+    {
+      "category": "Shoplifting",
+      "prior": 39,
+      "current": 32,
+      "change": -7
+    },
+    {
+      "category": "Theft From Building",
+      "prior": 7,
+      "current": 7,
+      "change": 0
+    },
+    {
+      "category": "Theft From Motor Vehicle",
+      "prior": 117,
+      "current": 123,
+      "change": 6
+    },
+    {
+      "category": "Theft of Motor Vehicle Parts",
+      "prior": 13,
+      "current": 13,
+      "change": 0
+    },
+    {
+      "category": "All Other Thefts",
+      "prior": 79,
+      "current": 83,
+      "change": 4
+    },
+    {
+      "category": "Arson",
+      "prior": 2,
+      "current": 2,
+      "change": 0
+    },
+    {
+      "category": "Forcible Sodomy",
+      "prior": 1,
+      "current": 1,
+      "change": 0
+    },
+    {
+      "category": "Identity Theft",
+      "prior": 6,
+      "current": 8,
+      "change": 2
+    },
+    {
+      "category": "Forcible Fondling",
+      "prior": 1,
+      "current": 2,
+      "change": 1
+    },
+    {
+      "category": "Simple Assault",
+      "prior": 57,
+      "current": 43,
+      "change": -14
+    },
+    {
+      "category": "Intimidation",
+      "prior": 21,
+      "current": 20,
+      "change": -1
+    },
+    {
+      "category": "Forgery",
+      "prior": 1,
+      "current": 0,
+      "change": -1
+    },
+    {
+      "category": "Extortion/Blackmail",
+      "prior": 4,
+      "current": 3,
+      "change": -1
+    },
+    {
+      "category": "False Pretenses/Swindle",
+      "prior": 13,
+      "current": 20,
+      "change": 7
+    },
+    {
+      "category": "Credit Card/Teller Fraud",
+      "prior": 8,
+      "current": 7,
+      "change": -1
+    },
+    {
+      "category": "Impersonation",
+      "prior": 1,
+      "current": 3,
+      "change": 2
+    },
+    {
+      "category": "Embezzlement",
+      "prior": 4,
+      "current": 3,
+      "change": -1
+    },
+    {
+      "category": "Stolen Property Offenses",
+      "prior": 5,
+      "current": 4,
+      "change": -1
+    },
+    {
+      "category": "Damage/Vandalism of Property",
+      "prior": 55,
+      "current": 58,
+      "change": 3
+    },
+    {
+      "category": "Drug Violations Opium",
+      "prior": 7,
+      "current": 8,
+      "change": 1
+    },
+    {
+      "category": "Drug Violations Marijuana",
+      "prior": 27,
+      "current": 40,
+      "change": 13
+    },
+    {
+      "category": "Drug Violations Synthetic Narcotics",
+      "prior": 2,
+      "current": 2,
+      "change": 0
+    },
+    {
+      "category": "Drug Violations Dangerous Non-Narcotics",
+      "prior": 5,
+      "current": 8,
+      "change": 3
+    },
+    {
+      "category": "Drug Equipment Violations",
+      "prior": 4,
+      "current": 5,
+      "change": 1
+    },
+    {
+      "category": "Weapon Law Violations Gun",
+      "prior": 11,
+      "current": 11,
+      "change": 0
+    },
+    {
+      "category": "Indecent Exposure",
+      "prior": 3,
+      "current": 3,
+      "change": 0
+    },
+    {
+      "category": "Disorderly Conduct",
+      "prior": 0,
+      "current": 4,
+      "change": 4
+    },
+    {
+      "category": "Driving Under the Influence",
+      "prior": 15,
+      "current": 18,
+      "change": 3
+    },
+    {
+      "category": "Liquor Law Violations",
+      "prior": 1,
+      "current": 1,
+      "change": 0
+    },
+    {
+      "category": "Trespass of Real Property",
+      "prior": 17,
+      "current": 14,
+      "change": -3
+    },
+    {
+      "category": "Affray",
+      "prior": 1,
+      "current": 0,
+      "change": -1
+    },
+    {
+      "category": "All Other Offenses",
+      "prior": 109,
+      "current": 110,
+      "change": 1
+    },
+    {
+      "category": "Missing Person 16 & Up",
+      "prior": 1,
+      "current": 0,
+      "change": -1
+    },
+    {
+      "category": "Suicide",
+      "prior": 5,
+      "current": 4,
+      "change": -1
+    },
+    {
+      "category": "Sudden/Natural Death Investigation",
+      "prior": 6,
+      "current": 7,
+      "change": 1
+    },
+    {
+      "category": "Overdose",
+      "prior": 3,
+      "current": 3,
+      "change": 0
+    },
+    {
+      "category": "Vehicle Recovery",
+      "prior": 1,
+      "current": 0,
+      "change": -1
+    },
+    {
+      "category": "Fire (Accidental/Non-Arson)",
+      "prior": 0,
+      "current": 1,
+      "change": 1
+    },
+    {
+      "category": "Public Accident",
+      "prior": 3,
+      "current": 3,
+      "change": 0
+    },
+    {
+      "category": "Other Unlisted Non-Criminal",
+      "prior": 62,
+      "current": 61,
+      "change": -1
+    }
+  ],
+  "vehicle": 201,
+  "drugs_and_equipment": 63,
+  "selected_firearm_categories": 20,
+  "notes": [
+    "Historical totals include criminal and non-criminal report categories. They are not a count of crimes alone.",
+    "The two five-year windows share four years. Their percentage difference is not year-over-year growth.",
+    "Drugs and equipment combines 58 drug violations and 5 drug-equipment violations.",
+    "The selected firearm categories are gun aggravated assault and gun weapon-law violations: 21 prior, 20 current. This grouping must not be treated as all gun crime.",
+    "These historical source categories differ from the daily public-feed classification; no direct trend between the two sources is calculated."
+  ]
+}

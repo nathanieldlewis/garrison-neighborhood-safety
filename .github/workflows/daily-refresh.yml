@@ -1,0 +1,67 @@
+name: Refresh and publish neighborhood safety
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+      timezone: 'America/New_York'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'public/data/latest.json'
+      - 'public/data/status.json'
+      - 'README.md'
+      - 'docs/**'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: garrison-safety-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out only the public-safety project
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Run offline validation tests
+        run: python -m unittest discover -s tests -v
+      - name: Refresh CMPD aggregates
+        id: refresh
+        continue-on-error: true
+        run: python src/refresh.py
+      - name: Retain the snapshot and update-status audit record
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/latest.json public/data/status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update CMPD aggregate snapshot and refresh status"
+            git push
+          fi
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload public assets only
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+      - name: Deploy public site
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Mark a failed data refresh for operator attention
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          echo "::error::The CMPD refresh failed. The last good data, or the unactivated state, was published with an explicit warning. Review before sharing as current."
+          exit 1
