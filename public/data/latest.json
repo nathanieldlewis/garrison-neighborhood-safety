@@ -7,27 +7,27 @@
     "longitude": -80.84027,
     "radius_feet": 1000
   },
-  "last_successful_fetch": "2026-10-16T14:54:31Z",
-  "report_date_window_end_exclusive": "2026-10-16",
-  "citywide_latest_report_date": "2026-10-14T00:00:00Z",
+  "last_successful_fetch": "2026-10-17T13:46:03Z",
+  "report_date_window_end_exclusive": "2026-10-17",
+  "citywide_latest_report_date": "2026-10-15T00:00:00Z",
   "citywide_earliest_report_date": "2017-01-01T00:00:00Z",
   "source_completeness_cutoff": null,
   "source_activity_warning": false,
   "periods": {
     "30": {
-      "start": "2026-09-16",
-      "end_exclusive": "2026-10-16",
-      "comparison_start": "2025-09-16",
-      "comparison_end_exclusive": "2025-10-16",
+      "start": "2026-09-17",
+      "end_exclusive": "2026-10-17",
+      "comparison_start": "2025-09-17",
+      "comparison_end_exclusive": "2025-10-17",
       "days": 30,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 13,
-        "all_reports": 13,
+        "criminal": 14,
+        "all_reports": 14,
         "categories": {
           "violent": 1,
-          "vehicle": 0,
+          "vehicle": 1,
           "drugs": 2,
           "burglary": 2,
           "vandalism": 1,
@@ -42,7 +42,7 @@
       },
       "comparison": {
         "criminal": 13,
-        "all_reports": 14,
+        "all_reports": 13,
         "categories": {
           "violent": 2,
           "vehicle": 6,
@@ -53,26 +53,26 @@
           "other": 3
         },
         "excluded": {
-          "unfounded": 1,
+          "unfounded": 0,
           "noncriminal": 0,
           "unclassified": 0
         }
       }
     },
     "90": {
-      "start": "2026-07-18",
-      "end_exclusive": "2026-10-16",
-      "comparison_start": "2025-07-18",
-      "comparison_end_exclusive": "2025-10-16",
+      "start": "2026-07-19",
+      "end_exclusive": "2026-10-17",
+      "comparison_start": "2025-07-19",
+      "comparison_end_exclusive": "2025-10-17",
       "days": 90,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 38,
-        "all_reports": 43,
+        "criminal": 39,
+        "all_reports": 44,
         "categories": {
           "violent": 1,
-          "vehicle": 5,
+          "vehicle": 6,
           "drugs": 8,
           "burglary": 2,
           "vandalism": 1,
@@ -105,19 +105,19 @@
       }
     },
     "365": {
-      "start": "2025-10-16",
-      "end_exclusive": "2026-10-16",
-      "comparison_start": "2024-10-16",
-      "comparison_end_exclusive": "2025-10-16",
+      "start": "2025-10-17",
+      "end_exclusive": "2026-10-17",
+      "comparison_start": "2024-10-17",
+      "comparison_end_exclusive": "2025-10-17",
       "days": 365,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 133,
-        "all_reports": 149,
+        "criminal": 134,
+        "all_reports": 150,
         "categories": {
           "violent": 8,
-          "vehicle": 20,
+          "vehicle": 21,
           "drugs": 30,
           "burglary": 4,
           "vandalism": 4,
@@ -151,18 +151,18 @@
     },
     "ytd": {
       "start": "2026-01-01",
-      "end_exclusive": "2026-10-16",
+      "end_exclusive": "2026-10-17",
       "comparison_start": "2025-01-01",
-      "comparison_end_exclusive": "2025-10-16",
-      "days": 288,
+      "comparison_end_exclusive": "2025-10-17",
+      "days": 289,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 109,
-        "all_reports": 123,
+        "criminal": 110,
+        "all_reports": 124,
         "categories": {
           "violent": 6,
-          "vehicle": 16,
+          "vehicle": 17,
           "drugs": 24,
           "burglary": 4,
           "vandalism": 3,
@@ -1887,13 +1887,19 @@
       "counts": {
         "other": 1
       }
+    },
+    {
+      "date": "2026-10-15",
+      "counts": {
+        "vehicle": 1
+      }
     }
   ],
   "quality": {
-    "rows_received": 286,
-    "unique_reports": 286,
+    "rows_received": 287,
+    "unique_reports": 287,
     "exact_duplicates_removed": 0,
-    "aggregate_sha256": "535a096dd5907d1ce524b1d169584bee800683c7c1bf74445b002df1bae09af8",
+    "aggregate_sha256": "6af97fd811ea99838ac7b71a4e260a4ff68e301e257010f867add0c2f6e7b10f",
     "history_change_override": false
   },
   "source": {
