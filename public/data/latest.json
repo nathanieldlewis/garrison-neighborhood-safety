@@ -7,24 +7,24 @@
     "longitude": -80.84027,
     "radius_feet": 1000
   },
-  "last_successful_fetch": "2026-10-17T13:46:03Z",
-  "report_date_window_end_exclusive": "2026-10-17",
-  "citywide_latest_report_date": "2026-10-15T00:00:00Z",
+  "last_successful_fetch": "2026-10-18T14:03:58Z",
+  "report_date_window_end_exclusive": "2026-10-18",
+  "citywide_latest_report_date": "2026-10-16T00:00:00Z",
   "citywide_earliest_report_date": "2017-01-01T00:00:00Z",
   "source_completeness_cutoff": null,
   "source_activity_warning": false,
   "periods": {
     "30": {
-      "start": "2026-09-17",
-      "end_exclusive": "2026-10-17",
-      "comparison_start": "2025-09-17",
-      "comparison_end_exclusive": "2025-10-17",
+      "start": "2026-09-18",
+      "end_exclusive": "2026-10-18",
+      "comparison_start": "2025-09-18",
+      "comparison_end_exclusive": "2025-10-18",
       "days": 30,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 14,
-        "all_reports": 14,
+        "criminal": 13,
+        "all_reports": 13,
         "categories": {
           "violent": 1,
           "vehicle": 1,
@@ -32,7 +32,7 @@
           "burglary": 2,
           "vandalism": 1,
           "theft_fraud": 1,
-          "other": 6
+          "other": 5
         },
         "excluded": {
           "unfounded": 0,
@@ -60,23 +60,23 @@
       }
     },
     "90": {
-      "start": "2026-07-19",
-      "end_exclusive": "2026-10-17",
-      "comparison_start": "2025-07-19",
-      "comparison_end_exclusive": "2025-10-17",
+      "start": "2026-07-20",
+      "end_exclusive": "2026-10-18",
+      "comparison_start": "2025-07-20",
+      "comparison_end_exclusive": "2025-10-18",
       "days": 90,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 39,
-        "all_reports": 44,
+        "criminal": 38,
+        "all_reports": 43,
         "categories": {
           "violent": 1,
           "vehicle": 6,
           "drugs": 8,
           "burglary": 2,
           "vandalism": 1,
-          "theft_fraud": 7,
+          "theft_fraud": 6,
           "other": 14
         },
         "excluded": {
@@ -105,10 +105,10 @@
       }
     },
     "365": {
-      "start": "2025-10-17",
-      "end_exclusive": "2026-10-17",
-      "comparison_start": "2024-10-17",
-      "comparison_end_exclusive": "2025-10-17",
+      "start": "2025-10-18",
+      "end_exclusive": "2026-10-18",
+      "comparison_start": "2024-10-18",
+      "comparison_end_exclusive": "2025-10-18",
       "days": 365,
       "current_available": true,
       "comparison_available": true,
@@ -131,15 +131,15 @@
         }
       },
       "comparison": {
-        "criminal": 121,
-        "all_reports": 137,
+        "criminal": 120,
+        "all_reports": 136,
         "categories": {
           "violent": 9,
           "vehicle": 42,
           "drugs": 8,
           "burglary": 3,
           "vandalism": 11,
-          "theft_fraud": 12,
+          "theft_fraud": 11,
           "other": 36
         },
         "excluded": {
@@ -151,10 +151,10 @@
     },
     "ytd": {
       "start": "2026-01-01",
-      "end_exclusive": "2026-10-17",
+      "end_exclusive": "2026-10-18",
       "comparison_start": "2025-01-01",
-      "comparison_end_exclusive": "2025-10-17",
-      "days": 289,
+      "comparison_end_exclusive": "2025-10-18",
+      "days": 290,
       "current_available": true,
       "comparison_available": true,
       "current": {
@@ -438,12 +438,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2024-10-17",
-      "counts": {
-        "theft_fraud": 1
-      }
-    },
     {
       "date": "2024-10-22",
       "counts": {
@@ -1896,10 +1890,10 @@
     }
   ],
   "quality": {
-    "rows_received": 287,
-    "unique_reports": 287,
+    "rows_received": 286,
+    "unique_reports": 286,
     "exact_duplicates_removed": 0,
-    "aggregate_sha256": "6af97fd811ea99838ac7b71a4e260a4ff68e301e257010f867add0c2f6e7b10f",
+    "aggregate_sha256": "f05ed9d4bd005eeecb595ca25bb226ac2909dddd87d1433779c0ddc3830a5a6b",
     "history_change_override": false
   },
   "source": {
