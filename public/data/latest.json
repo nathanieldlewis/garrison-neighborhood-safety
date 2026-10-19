@@ -7,29 +7,29 @@
     "longitude": -80.84027,
     "radius_feet": 1000
   },
-  "last_successful_fetch": "2026-10-18T14:03:58Z",
-  "report_date_window_end_exclusive": "2026-10-18",
-  "citywide_latest_report_date": "2026-10-16T00:00:00Z",
+  "last_successful_fetch": "2026-10-19T16:59:49Z",
+  "report_date_window_end_exclusive": "2026-10-19",
+  "citywide_latest_report_date": "2026-10-17T00:00:00Z",
   "citywide_earliest_report_date": "2017-01-01T00:00:00Z",
   "source_completeness_cutoff": null,
   "source_activity_warning": false,
   "periods": {
     "30": {
-      "start": "2026-09-18",
-      "end_exclusive": "2026-10-18",
-      "comparison_start": "2025-09-18",
-      "comparison_end_exclusive": "2025-10-18",
+      "start": "2026-09-19",
+      "end_exclusive": "2026-10-19",
+      "comparison_start": "2025-09-19",
+      "comparison_end_exclusive": "2025-10-19",
       "days": 30,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 13,
-        "all_reports": 13,
+        "criminal": 12,
+        "all_reports": 12,
         "categories": {
           "violent": 1,
           "vehicle": 1,
           "drugs": 2,
-          "burglary": 2,
+          "burglary": 1,
           "vandalism": 1,
           "theft_fraud": 1,
           "other": 5
@@ -41,11 +41,11 @@
         }
       },
       "comparison": {
-        "criminal": 13,
-        "all_reports": 13,
+        "criminal": 12,
+        "all_reports": 12,
         "categories": {
           "violent": 2,
-          "vehicle": 6,
+          "vehicle": 5,
           "drugs": 0,
           "burglary": 1,
           "vandalism": 0,
@@ -60,10 +60,10 @@
       }
     },
     "90": {
-      "start": "2026-07-20",
-      "end_exclusive": "2026-10-18",
-      "comparison_start": "2025-07-20",
-      "comparison_end_exclusive": "2025-10-18",
+      "start": "2026-07-21",
+      "end_exclusive": "2026-10-19",
+      "comparison_start": "2025-07-21",
+      "comparison_end_exclusive": "2025-10-19",
       "days": 90,
       "current_available": true,
       "comparison_available": true,
@@ -105,10 +105,10 @@
       }
     },
     "365": {
-      "start": "2025-10-18",
-      "end_exclusive": "2026-10-18",
-      "comparison_start": "2024-10-18",
-      "comparison_end_exclusive": "2025-10-18",
+      "start": "2025-10-19",
+      "end_exclusive": "2026-10-19",
+      "comparison_start": "2024-10-19",
+      "comparison_end_exclusive": "2025-10-19",
       "days": 365,
       "current_available": true,
       "comparison_available": true,
@@ -151,10 +151,10 @@
     },
     "ytd": {
       "start": "2026-01-01",
-      "end_exclusive": "2026-10-18",
+      "end_exclusive": "2026-10-19",
       "comparison_start": "2025-01-01",
-      "comparison_end_exclusive": "2025-10-18",
-      "days": 290,
+      "comparison_end_exclusive": "2025-10-19",
+      "days": 291,
       "current_available": true,
       "comparison_available": true,
       "current": {
