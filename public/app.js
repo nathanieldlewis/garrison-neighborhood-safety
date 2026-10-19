@@ -46,6 +46,7 @@
   function validateLive(data) {
     if (!data || data.schema_version !== 1) throw Error("Unsupported snapshot schema");
     if (data.mode !== "published") return;
+    if (data.scope?.radius_feet !== 1000 || data.scope?.latitude !== 35.23579 || data.scope?.longitude !== -80.84027) throw Error("Study boundary does not match the dashboard");
     if (!data.last_successful_fetch || !Number.isFinite(Date.parse(data.last_successful_fetch))) throw Error("Missing refresh time");
     for (const key of ["30","90","365","ytd"]) {
       const p = data.periods?.[key];
@@ -95,6 +96,7 @@
     }
     $("last-fetch").textContent = stamp(live?.last_successful_fetch);
     $("latest-source").textContent = sourceDay(live?.citywide_latest_report_date);
+    window.GarrisonReporting?.refresh(live, state.status);
   }
   function renderMetrics() {
     const p = state.live?.mode === "published" ? state.live.periods[state.period] : null;
@@ -189,7 +191,7 @@
     $("overlap-chart").innerHTML=`<div class="overlap-row"><div class="overlap-label"><span>July 8, 2020 to July 7, 2025</span><strong>870</strong></div><div class="overlap-bar" style="width:${870/893*100}%"></div><small>Earlier five-year window</small></div><div class="overlap-row"><div class="overlap-label"><span>July 8, 2021 to July 7, 2026</span><strong>893</strong></div><div class="overlap-bar current" style="width:100%"></div><small>Later five-year window</small></div><div class="overlap-note"><strong>+23</strong><p>Net difference between the two windows.<br>Not an annual trend or an annual percentage increase.</p></div>`;
     $("history-table").innerHTML=h.rows.map(r=>`<tr><th scope="row">${esc(r.category)}</th><td>${fmt(r.prior)}</td><td>${fmt(r.current)}</td><td>${r.change>0?"+":""}${r.change}</td></tr>`).join("");
   }
-  function renderDaily() { renderStatus();renderMetrics();renderCategories();renderMonthly();renderChanges();renderReconciliation(); }
+  function renderDaily() { renderStatus();renderMetrics();renderCategories();renderMonthly();renderChanges();renderReconciliation();window.GarrisonReporting?.render(state, downloadCSV); }
   function downloadCSV(filename, rows) {
     const cell = value => {
       let s=String(value ?? "");

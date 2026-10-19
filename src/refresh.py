@@ -293,10 +293,34 @@ def summarize(daily: list[dict], start: date, end: date) -> dict:
     }
 
 
+def annual_summaries(daily: list[dict], coverage_start: date, end: date, source_quiet: bool) -> list[dict]:
+    """Three completed calendar years plus current YTD; estimates stay separate."""
+    result = []
+    for year in range(end.year - 3, end.year + 1):
+        start, next_year = date(year, 1, 1), date(year + 1, 1, 1)
+        finish = min(next_year, end)
+        days, year_days = (finish - start).days, (next_year - start).days
+        partial = year == end.year
+        available = coverage_start <= start and days > 0
+        totals = summarize(daily, start, finish)
+        # A run rate is a simple extrapolation, not a forecast. Withhold short or
+        # visibly delayed source windows; never manufacture a completed-year total.
+        estimate = None
+        if partial and available and days >= 30 and not source_quiet:
+            estimate = {
+                "criminal": round(totals["criminal"] * year_days / days, 1),
+                "categories": {k: round(n * year_days / days, 1) for k, n in totals["categories"].items()},
+            }
+        result.append({"year": year, "start": start.isoformat(), "end_exclusive": finish.isoformat(),
+                       "days": days, "days_in_year": year_days, "is_partial": partial,
+                       "available": available, **totals, "annualized": estimate})
+    return result
+
+
 def build_snapshot(rows: list[dict], bounds: dict, end: date, fetched_at: str) -> dict:
     periods = periods_for(end)
     oldest_needed = min(min(v[0], v[2]) for v in periods.values())
-    oldest_needed = min(oldest_needed, month_start_shift(end, -12))
+    oldest_needed = min(oldest_needed, month_start_shift(end, -12), date(end.year - 3, 1, 1))
     unique, duplicate_count = deduplicate(rows)
     daily = daily_aggregates(unique, oldest_needed, end)
     coverage_start = to_local_date(bounds["first_report"])
@@ -325,15 +349,17 @@ def build_snapshot(rows: list[dict], bounds: dict, end: date, fetched_at: str) -
         "scope": {"address": "715 N. Graham St., Charlotte, NC", "latitude": LAT, "longitude": LON, "radius_feet": RADIUS_FT},
         "last_successful_fetch": fetched_at,
         "report_date_window_end_exclusive": end.isoformat(),
+        "query_start": oldest_needed.isoformat(),
         "citywide_latest_report_date": to_iso_timestamp(bounds["latest_report"]),
         "citywide_earliest_report_date": to_iso_timestamp(bounds["first_report"]),
         "source_completeness_cutoff": None,
         "source_activity_warning": (end - latest_source).days > 3,
         "periods": result_periods, "monthly": monthly, "daily": daily,
+        "annual": annual_summaries(daily, coverage_start, end, (end - latest_source).days > 3),
         "quality": {"rows_received": len(rows), "unique_reports": len(unique), "exact_duplicates_removed": duplicate_count,
                     "aggregate_sha256": hashlib.sha256(canonical.encode()).hexdigest()},
         "source": {"name": "City of Charlotte / CMPD Incidents", "url": SOURCE_PAGE, "layer": LAYER},
-        "method_version": "1.0",
+        "method_version": "1.1",
     }
     validate_snapshot(snapshot)
     return snapshot
@@ -352,6 +378,32 @@ def validate_snapshot(snapshot: dict) -> None:
             counts = [values["criminal"], values["all_reports"], *values["categories"].values(), *values["excluded"].values()]
             if any(not isinstance(n, int) or isinstance(n, bool) or n < 0 for n in counts):
                 raise DataError("Counts must be non-negative integers.")
+    annual = snapshot.get("annual", [])
+    end = date.fromisoformat(snapshot["report_date_window_end_exclusive"])
+    expected_years = list(range(end.year - 3, end.year + 1))
+    if [a.get("year") for a in annual] != expected_years:
+        raise DataError("Annual series must contain three completed years and current YTD.")
+    for a in annual:
+        start, finish = date.fromisoformat(a["start"]), date.fromisoformat(a["end_exclusive"])
+        if start != date(a["year"], 1, 1) or finish != min(date(a["year"] + 1, 1, 1), end):
+            raise DataError("Annual dates do not match the labeled calendar year.")
+        if a["days"] != (finish - start).days or a["days_in_year"] != 365 + calendar.isleap(a["year"]):
+            raise DataError("Annual day counts are inconsistent.")
+        if a["is_partial"] != (a["year"] == end.year):
+            raise DataError("A partial year was labeled as complete.")
+        counts = [a["criminal"], a["all_reports"], *a["categories"].values(), *a["excluded"].values()]
+        if any(not isinstance(n, int) or isinstance(n, bool) or n < 0 for n in counts):
+            raise DataError("Annual actual counts must be non-negative integers.")
+        if a["criminal"] != sum(a["categories"].values()) or a["all_reports"] != a["criminal"] + sum(a["excluded"].values()):
+            raise DataError("Annual counts do not reconcile.")
+        estimate = a["annualized"]
+        eligible = a["is_partial"] and a["available"] and a["days"] >= 30 and not snapshot["source_activity_warning"]
+        if (estimate is not None) != bool(eligible):
+            raise DataError("Annualized estimate does not meet the publication rule.")
+        if estimate is not None:
+            pairs = [(a["criminal"], estimate["criminal"])] + [(a["categories"][k], estimate["categories"][k]) for k in CATEGORY_LABELS]
+            if any(projected != round(actual * a["days_in_year"] / a["days"], 1) for actual, projected in pairs):
+                raise DataError("Annualization does not match actual counts and elapsed days.")
     # Fail closed if a future edit accidentally carries raw source fields into output.
     blocked = {name.lower() for name in FIELDS} | {"location", "unit", "victim", "narrative", "report_id", "features", "attributes", "geometry"}
     def walk(value: Any) -> None:
@@ -372,7 +424,9 @@ def history_change_guard(previous: dict | None, current: dict) -> None:
     old = {r["date"]: sum(r["counts"].values()) for r in previous.get("daily", [])}
     new = {r["date"]: sum(r["counts"].values()) for r in current.get("daily", [])}
     # Compare exactly the same dates. Days with zero current reports still count.
-    lower = min(p["comparison_start"] for p in current["periods"].values())
+    old_start = previous.get("query_start", min(p["comparison_start"] for p in previous["periods"].values()))
+    new_start = current.get("query_start", min(p["comparison_start"] for p in current["periods"].values()))
+    lower = max(old_start, new_start)
     upper = min(previous["report_date_window_end_exclusive"], current["report_date_window_end_exclusive"])
     old_total = sum(n for d, n in old.items() if lower <= d < upper)
     new_total = sum(n for d, n in new.items() if lower <= d < upper)
@@ -393,7 +447,7 @@ def run(data_dir: Path = DATA, accept_history_change: bool = False) -> dict:
         end = datetime.now(ET).date()  # yesterday is the last completed reporting day
         windows = periods_for(end)
         start = min(min(v[0], v[2]) for v in windows.values())
-        start = min(start, month_start_shift(end, -12))
+        start = min(start, month_start_shift(end, -12), date(end.year - 3, 1, 1))
         rows = fetch_rows(start, end)
         snapshot = build_snapshot(rows, bounds, end, utc_iso())
         if not accept_history_change:
