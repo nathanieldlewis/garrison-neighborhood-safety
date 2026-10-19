@@ -7,8 +7,9 @@
     "longitude": -80.84027,
     "radius_feet": 1000
   },
-  "last_successful_fetch": "2026-10-19T16:59:49Z",
+  "last_successful_fetch": "2026-10-19T17:02:00Z",
   "report_date_window_end_exclusive": "2026-10-19",
+  "query_start": "2023-01-01",
   "citywide_latest_report_date": "2026-10-17T00:00:00Z",
   "citywide_earliest_report_date": "2017-01-01T00:00:00Z",
   "source_completeness_cutoff": null,
@@ -438,6 +439,1199 @@
     }
   ],
   "daily": [
+    {
+      "date": "2023-01-05",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-01-08",
+      "counts": {
+        "other": 2
+      }
+    },
+    {
+      "date": "2023-01-14",
+      "counts": {
+        "noncriminal": 1,
+        "unfounded": 2
+      }
+    },
+    {
+      "date": "2023-01-24",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-01-29",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-01-30",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2023-02-04",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2023-02-07",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-02-10",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2023-02-11",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-02-23",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2023-03-01",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-03-04",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-03-05",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2023-03-10",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-03-11",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-03-12",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-03-13",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-03-18",
+      "counts": {
+        "noncriminal": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-03-21",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-03-23",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-03-24",
+      "counts": {
+        "other": 1,
+        "vehicle": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2023-03-25",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2023-03-27",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-03-28",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-03-29",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-04-01",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-04-02",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-04-06",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2023-04-07",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-04-10",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-04-11",
+      "counts": {
+        "noncriminal": 1,
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-04-13",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2023-04-16",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-04-18",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-04-21",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-04-22",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2023-04-24",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2023-04-26",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-04-30",
+      "counts": {
+        "other": 1,
+        "vehicle": 2
+      }
+    },
+    {
+      "date": "2023-05-01",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2023-05-02",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-05-03",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2023-05-04",
+      "counts": {
+        "vehicle": 2
+      }
+    },
+    {
+      "date": "2023-05-09",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-05-11",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-05-14",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-05-15",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-05-17",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-05-19",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-05-20",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-05-21",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-05-22",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-06-01",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2023-06-03",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2023-06-13",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-06-18",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-06-20",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2023-06-22",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-06-26",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2023-06-27",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-07-02",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-07-05",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-07-06",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2023-07-07",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-07-09",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-07-12",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-07-15",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2023-07-16",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-07-17",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-07-20",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-07-21",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-07-26",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-08-05",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2023-08-08",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-08-17",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2023-08-18",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-08-26",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-08-29",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-09-01",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-09-02",
+      "counts": {
+        "other": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2023-09-12",
+      "counts": {
+        "theft_fraud": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2023-09-15",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-09-17",
+      "counts": {
+        "burglary": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-09-18",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-09-20",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-09-23",
+      "counts": {
+        "vehicle": 6
+      }
+    },
+    {
+      "date": "2023-09-25",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-09-26",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-09-27",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-10-01",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-10-13",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-10-14",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-10-17",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-10-22",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-10-23",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-10-24",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2023-10-30",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-11-02",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2023-11-11",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-11-12",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2023-11-23",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2023-11-25",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-11-30",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-12-04",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2023-12-09",
+      "counts": {
+        "other": 2
+      }
+    },
+    {
+      "date": "2023-12-17",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2023-12-21",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2023-12-22",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2023-12-25",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2023-12-27",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2023-12-28",
+      "counts": {
+        "burglary": 1
+      }
+    },
+    {
+      "date": "2024-01-01",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-01-02",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-01-03",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-01-06",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2024-01-09",
+      "counts": {
+        "drugs": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-01-12",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-01-13",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-01-15",
+      "counts": {
+        "theft_fraud": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-01-16",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-01-18",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-02-11",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-02-16",
+      "counts": {
+        "vandalism": 1
+      }
+    },
+    {
+      "date": "2024-02-21",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-02-24",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-02-25",
+      "counts": {
+        "vehicle": 2
+      }
+    },
+    {
+      "date": "2024-03-03",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-03-05",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-03-22",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-03-30",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2024-04-01",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2024-04-02",
+      "counts": {
+        "vandalism": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-04-03",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-04-13",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-04-14",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-04-22",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-04-26",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-04-27",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-04-28",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2024-04-29",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2024-04-30",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-05-01",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-05-06",
+      "counts": {
+        "burglary": 1,
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-05-12",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2024-05-13",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2024-05-15",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-05-17",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-05-24",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2024-05-25",
+      "counts": {
+        "drugs": 1
+      }
+    },
+    {
+      "date": "2024-05-28",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-06-03",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-06-04",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-06-07",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-06-11",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-06-17",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2024-06-20",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-06-21",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-06-25",
+      "counts": {
+        "other": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-06-26",
+      "counts": {
+        "burglary": 1,
+        "drugs": 1,
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-06-27",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-07-02",
+      "counts": {
+        "other": 2,
+        "vehicle": 2
+      }
+    },
+    {
+      "date": "2024-07-06",
+      "counts": {
+        "vehicle": 2
+      }
+    },
+    {
+      "date": "2024-07-08",
+      "counts": {
+        "other": 1,
+        "theft_fraud": 1,
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-07-10",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-07-12",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-07-13",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-07-16",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-07-18",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-07-19",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2024-07-21",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-07-22",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-07-27",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-07-28",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-08-01",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-08-02",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2024-08-05",
+      "counts": {
+        "other": 3,
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2024-08-09",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-08-11",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-08-13",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-08-15",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-08-27",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-09-02",
+      "counts": {
+        "theft_fraud": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-09-03",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-09-04",
+      "counts": {
+        "violent": 1
+      }
+    },
+    {
+      "date": "2024-09-05",
+      "counts": {
+        "unfounded": 1
+      }
+    },
+    {
+      "date": "2024-09-16",
+      "counts": {
+        "noncriminal": 1
+      }
+    },
+    {
+      "date": "2024-09-24",
+      "counts": {
+        "theft_fraud": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-09-26",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
+    {
+      "date": "2024-10-07",
+      "counts": {
+        "theft_fraud": 1,
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-10-09",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-10-11",
+      "counts": {
+        "vehicle": 1
+      }
+    },
+    {
+      "date": "2024-10-14",
+      "counts": {
+        "other": 1
+      }
+    },
+    {
+      "date": "2024-10-17",
+      "counts": {
+        "theft_fraud": 1
+      }
+    },
     {
       "date": "2024-10-22",
       "counts": {
@@ -1889,11 +3083,128 @@
       }
     }
   ],
+  "annual": [
+    {
+      "year": 2023,
+      "start": "2023-01-01",
+      "end_exclusive": "2024-01-01",
+      "days": 365,
+      "days_in_year": 365,
+      "is_partial": false,
+      "available": true,
+      "criminal": 118,
+      "all_reports": 134,
+      "categories": {
+        "violent": 8,
+        "vehicle": 42,
+        "drugs": 4,
+        "burglary": 5,
+        "vandalism": 4,
+        "theft_fraud": 29,
+        "other": 26
+      },
+      "excluded": {
+        "unfounded": 5,
+        "noncriminal": 11,
+        "unclassified": 0
+      },
+      "annualized": null
+    },
+    {
+      "year": 2024,
+      "start": "2024-01-01",
+      "end_exclusive": "2025-01-01",
+      "days": 366,
+      "days_in_year": 366,
+      "is_partial": false,
+      "available": true,
+      "criminal": 117,
+      "all_reports": 131,
+      "categories": {
+        "violent": 10,
+        "vehicle": 34,
+        "drugs": 6,
+        "burglary": 2,
+        "vandalism": 4,
+        "theft_fraud": 27,
+        "other": 34
+      },
+      "excluded": {
+        "unfounded": 6,
+        "noncriminal": 8,
+        "unclassified": 0
+      },
+      "annualized": null
+    },
+    {
+      "year": 2025,
+      "start": "2025-01-01",
+      "end_exclusive": "2026-01-01",
+      "days": 365,
+      "days_in_year": 365,
+      "is_partial": false,
+      "available": true,
+      "criminal": 121,
+      "all_reports": 136,
+      "categories": {
+        "violent": 8,
+        "vehicle": 36,
+        "drugs": 13,
+        "burglary": 3,
+        "vandalism": 11,
+        "theft_fraud": 14,
+        "other": 36
+      },
+      "excluded": {
+        "unfounded": 3,
+        "noncriminal": 10,
+        "unclassified": 2
+      },
+      "annualized": null
+    },
+    {
+      "year": 2026,
+      "start": "2026-01-01",
+      "end_exclusive": "2026-10-19",
+      "days": 291,
+      "days_in_year": 365,
+      "is_partial": true,
+      "available": true,
+      "criminal": 110,
+      "all_reports": 124,
+      "categories": {
+        "violent": 6,
+        "vehicle": 17,
+        "drugs": 24,
+        "burglary": 4,
+        "vandalism": 3,
+        "theft_fraud": 17,
+        "other": 39
+      },
+      "excluded": {
+        "unfounded": 1,
+        "noncriminal": 13,
+        "unclassified": 0
+      },
+      "annualized": {
+        "criminal": 138.0,
+        "categories": {
+          "violent": 7.5,
+          "vehicle": 21.3,
+          "drugs": 30.1,
+          "burglary": 5.0,
+          "vandalism": 3.8,
+          "theft_fraud": 21.3,
+          "other": 48.9
+        }
+      }
+    }
+  ],
   "quality": {
-    "rows_received": 286,
-    "unique_reports": 286,
+    "rows_received": 525,
+    "unique_reports": 525,
     "exact_duplicates_removed": 0,
-    "aggregate_sha256": "f05ed9d4bd005eeecb595ca25bb226ac2909dddd87d1433779c0ddc3830a5a6b",
+    "aggregate_sha256": "b35eb13fb107ab07342db7e8d424a5be20eefb90905fb60fbdabb18a085dab17",
     "history_change_override": false
   },
   "source": {
@@ -1901,5 +3212,5 @@
     "url": "https://data.charlottenc.gov/datasets/charlotte::cmpd-incidents-1",
     "layer": "https://gis.charlottenc.gov/arcgis/rest/services/CMPD/CMPDIncidents/MapServer/0"
   },
-  "method_version": "1.0"
+  "method_version": "1.1"
 }
