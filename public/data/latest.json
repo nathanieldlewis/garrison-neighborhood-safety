@@ -7,33 +7,33 @@
     "longitude": -80.84027,
     "radius_feet": 1000
   },
-  "last_successful_fetch": "2026-11-07T16:52:00Z",
-  "report_date_window_end_exclusive": "2026-11-07",
+  "last_successful_fetch": "2026-11-08T17:05:48Z",
+  "report_date_window_end_exclusive": "2026-11-08",
   "query_start": "2023-01-01",
-  "citywide_latest_report_date": "2026-11-05T00:00:00Z",
+  "citywide_latest_report_date": "2026-11-06T00:00:00Z",
   "citywide_earliest_report_date": "2017-01-01T00:00:00Z",
   "source_completeness_cutoff": null,
   "source_activity_warning": false,
   "periods": {
     "30": {
-      "start": "2026-10-08",
-      "end_exclusive": "2026-11-07",
-      "comparison_start": "2025-10-08",
-      "comparison_end_exclusive": "2025-11-07",
+      "start": "2026-10-09",
+      "end_exclusive": "2026-11-08",
+      "comparison_start": "2025-10-09",
+      "comparison_end_exclusive": "2025-11-08",
       "days": 30,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 6,
-        "all_reports": 7,
+        "criminal": 8,
+        "all_reports": 9,
         "categories": {
           "violent": 0,
           "vehicle": 1,
-          "drugs": 1,
+          "drugs": 2,
           "burglary": 0,
           "vandalism": 1,
           "theft_fraud": 0,
-          "other": 3
+          "other": 4
         },
         "excluded": {
           "unfounded": 0,
@@ -42,12 +42,12 @@
         }
       },
       "comparison": {
-        "criminal": 13,
-        "all_reports": 13,
+        "criminal": 14,
+        "all_reports": 14,
         "categories": {
           "violent": 3,
           "vehicle": 5,
-          "drugs": 1,
+          "drugs": 2,
           "burglary": 1,
           "vandalism": 0,
           "theft_fraud": 2,
@@ -61,24 +61,24 @@
       }
     },
     "90": {
-      "start": "2026-08-09",
-      "end_exclusive": "2026-11-07",
-      "comparison_start": "2025-08-09",
-      "comparison_end_exclusive": "2025-11-07",
+      "start": "2026-08-10",
+      "end_exclusive": "2026-11-08",
+      "comparison_start": "2025-08-10",
+      "comparison_end_exclusive": "2025-11-08",
       "days": 90,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 31,
-        "all_reports": 34,
+        "criminal": 33,
+        "all_reports": 36,
         "categories": {
           "violent": 1,
           "vehicle": 6,
-          "drugs": 6,
+          "drugs": 7,
           "burglary": 2,
           "vandalism": 1,
           "theft_fraud": 2,
-          "other": 13
+          "other": 14
         },
         "excluded": {
           "unfounded": 1,
@@ -87,12 +87,12 @@
         }
       },
       "comparison": {
-        "criminal": 33,
-        "all_reports": 37,
+        "criminal": 34,
+        "all_reports": 38,
         "categories": {
           "violent": 6,
           "vehicle": 9,
-          "drugs": 4,
+          "drugs": 5,
           "burglary": 1,
           "vandalism": 1,
           "theft_fraud": 3,
@@ -106,16 +106,16 @@
       }
     },
     "365": {
-      "start": "2025-11-07",
-      "end_exclusive": "2026-11-07",
-      "comparison_start": "2024-11-07",
-      "comparison_end_exclusive": "2025-11-07",
+      "start": "2025-11-08",
+      "end_exclusive": "2026-11-08",
+      "comparison_start": "2024-11-08",
+      "comparison_end_exclusive": "2025-11-08",
       "days": 365,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 128,
-        "all_reports": 145,
+        "criminal": 129,
+        "all_reports": 146,
         "categories": {
           "violent": 6,
           "vehicle": 18,
@@ -123,7 +123,7 @@
           "burglary": 4,
           "vandalism": 4,
           "theft_fraud": 22,
-          "other": 45
+          "other": 46
         },
         "excluded": {
           "unfounded": 2,
@@ -132,12 +132,12 @@
         }
       },
       "comparison": {
-        "criminal": 117,
-        "all_reports": 133,
+        "criminal": 118,
+        "all_reports": 134,
         "categories": {
           "violent": 9,
           "vehicle": 40,
-          "drugs": 8,
+          "drugs": 9,
           "burglary": 3,
           "vandalism": 11,
           "theft_fraud": 12,
@@ -152,23 +152,23 @@
     },
     "ytd": {
       "start": "2026-01-01",
-      "end_exclusive": "2026-11-07",
+      "end_exclusive": "2026-11-08",
       "comparison_start": "2025-01-01",
-      "comparison_end_exclusive": "2025-11-07",
-      "days": 310,
+      "comparison_end_exclusive": "2025-11-08",
+      "days": 311,
       "current_available": true,
       "comparison_available": true,
       "current": {
-        "criminal": 112,
-        "all_reports": 127,
+        "criminal": 114,
+        "all_reports": 129,
         "categories": {
           "violent": 6,
           "vehicle": 17,
-          "drugs": 24,
+          "drugs": 25,
           "burglary": 4,
           "vandalism": 3,
           "theft_fraud": 17,
-          "other": 41
+          "other": 42
         },
         "excluded": {
           "unfounded": 1,
@@ -177,12 +177,12 @@
         }
       },
       "comparison": {
-        "criminal": 105,
-        "all_reports": 118,
+        "criminal": 106,
+        "all_reports": 119,
         "categories": {
           "violent": 8,
           "vehicle": 35,
-          "drugs": 8,
+          "drugs": 9,
           "burglary": 3,
           "vandalism": 10,
           "theft_fraud": 9,
@@ -3097,7 +3097,9 @@
     {
       "date": "2026-11-01",
       "counts": {
-        "noncriminal": 1
+        "drugs": 1,
+        "noncriminal": 1,
+        "other": 1
       }
     }
   ],
@@ -3183,21 +3185,21 @@
     {
       "year": 2026,
       "start": "2026-01-01",
-      "end_exclusive": "2026-11-07",
-      "days": 310,
+      "end_exclusive": "2026-11-08",
+      "days": 311,
       "days_in_year": 365,
       "is_partial": true,
       "available": true,
-      "criminal": 112,
-      "all_reports": 127,
+      "criminal": 114,
+      "all_reports": 129,
       "categories": {
         "violent": 6,
         "vehicle": 17,
-        "drugs": 24,
+        "drugs": 25,
         "burglary": 4,
         "vandalism": 3,
         "theft_fraud": 17,
-        "other": 41
+        "other": 42
       },
       "excluded": {
         "unfounded": 1,
@@ -3205,24 +3207,24 @@
         "unclassified": 0
       },
       "annualized": {
-        "criminal": 131.9,
+        "criminal": 133.8,
         "categories": {
-          "violent": 7.1,
+          "violent": 7.0,
           "vehicle": 20.0,
-          "drugs": 28.3,
+          "drugs": 29.3,
           "burglary": 4.7,
           "vandalism": 3.5,
           "theft_fraud": 20.0,
-          "other": 48.3
+          "other": 49.3
         }
       }
     }
   ],
   "quality": {
-    "rows_received": 528,
-    "unique_reports": 528,
+    "rows_received": 530,
+    "unique_reports": 530,
     "exact_duplicates_removed": 0,
-    "aggregate_sha256": "ff0608c5aa4455021235bcf12b84670b738d0456c632f44cc127bb1a42a09aa6",
+    "aggregate_sha256": "9e82b84417b6c8af2908e01448091d145c0a81cd0aba46528a2acdfe946a8011",
     "history_change_override": false
   },
   "source": {
